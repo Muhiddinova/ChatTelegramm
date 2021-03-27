@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1010"
+    android:layout_marginTop="16dp">
+
+    <EditText
+        android:id="@+id/groupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:hint="Guruh nomini kiriting"
+        android:padding="8dp"
+        android:textColor="@color/blackColor"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/conversation_edit_text_shape"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/createGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:text="yaratish"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/groupName"
+        android:textColor="#FFF"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/conversation_edit_text_shape"/>
+</RelativeLayout></layout>

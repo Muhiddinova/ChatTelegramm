@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="messageData"
+            type="com.visola_khudoynazarova.chattelegramm.model.MessageData" />
+
+        <variable
+            name="chatType"
+            type="String" />
+
+        <variable
+            name="usersImages"
+            type="java.util.HashMap&lt;String, String>" />
+        <variable
+            name="usersNames"
+            type="java.util.HashMap&lt;String, String>" />
+
+        <variable
+            name="seenMessage"
+            type="Boolean" />
+
+        <variable
+            name="myUid"
+            type="String" />
+        <variable
+            name="conversationVM"
+            type="com.visola_khudoynazarova.chattelegramm.ui.activity.conversation.ConversationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/received_rectangle"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/groupUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility='@{chatType.equals("group")? View.VISIBLE: View.GONE}'
+                android:text="@{usersNames[messageData.senderUid]}"/>
+
+            <ImageView
+                android:id="@+id/image_message_body"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="#000"
+                android:onClick="@{() -> conversationVM.displayImage(messageData.mediaPath, messageData.type, messageData.message)}"
+                android:visibility='@{messageData.type.equals("Voice Record") || messageData.type.equals("message")? View.GONE: View.VISIBLE}'
+                tools:text="hi man, how are you?" />
+
+
+            <TextView
+                android:id="@+id/text_message_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@{messageData.message}"
+                android:visibility='@{messageData.type.equals("Voice Record")?View.GONE: View.VISIBLE}'
+                android:textColor="#101013"
+                tools:text="hi man, how are you?" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/messageDate"
+                    android:textSize="10sp"
+                    android:text='@{messageData.date}'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#BDBCBC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/messageSeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

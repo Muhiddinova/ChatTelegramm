@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment"/>
+    <fragment
+        android:id="@+id/allChatFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.allChat.AllChatFragment"
+        android:label="all_chat_fragment"
+        tools:layout="@layout/all_chat_fragment" />
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.personal.PersonalFragment"
+        android:label="PersonalFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.joinGroup.GroupsFragment"
+        android:label="GroupsFragment" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.contact.ContactsFragment"
+        android:label="ContactsFragment" />
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.conversation.ConversationFragment"
+        android:label="ConversationFragment" />
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.activity.createGroup.CreateGroupFragment"
+        android:label="CreateGroupFragment" />
+
+</navigation>

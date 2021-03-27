@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="users"
+            type="com.visola_khudoynazarova.chattelegramm.model.Users" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.profile.ProfileFragment">
+
+    <ImageView
+        android:layout_marginTop="32sp"
+        android:id="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:background="@drawable/circle_shape"
+        android:src="@drawable/ic_account_setting"
+        android:layout_height="wrap_content"
+        android:text="Hello" />
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:textSize="16sp"
+        android:text='@{"User Name: " + users.name}'
+
+        />
+    <TextView
+        android:id="@+id/user_number"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        android:layout_margin="16dp"
+        android:textSize="16sp"
+        android:layout_marginStart="32dp"
+        android:text='@{"Number: " + users.number}'
+        />
+    <TextView
+        android:layout_marginStart="32dp"
+        android:id="@+id/user_status"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_number"
+        android:layout_margin="16dp"
+        android:textSize="16sp"
+        android:text='@{"Status: " + users.status}'
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

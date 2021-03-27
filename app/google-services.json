@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "340835839257",
+    "firebase_url": "https://chat-eb16a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "chat-eb16a",
+    "storage_bucket": "chat-eb16a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340835839257:android:db1afb0ae8699e96d16988",
+        "android_client_info": {
+          "package_name": "com.example.chattelegramm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340835839257-oobvm4lstgkjg4l80a9bgk0mavndjke5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chattelegramm",
+            "certificate_hash": "98c8ab7ac31a094f451d0c46bd5e1d41cd8af1c6"
+          }
+        },
+        {
+          "client_id": "340835839257-i4phti7ve99h0bdcurksutrp7h69ic7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_i_svE0NH8N-RiVGYlNbjZFpCXpnURTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340835839257-i4phti7ve99h0bdcurksutrp7h69ic7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340835839257:android:28c932924f55f682d16988",
+        "android_client_info": {
+          "package_name": "com.visola_khudoynazarova.chattelegramm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340835839257-jf2pvrgum0213ri7meka6kepo3c9c9fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.visola_khudoynazarova.chattelegramm",
+            "certificate_hash": "98c8ab7ac31a094f451d0c46bd5e1d41cd8af1c6"
+          }
+        },
+        {
+          "client_id": "340835839257-i4phti7ve99h0bdcurksutrp7h69ic7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_i_svE0NH8N-RiVGYlNbjZFpCXpnURTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340835839257-i4phti7ve99h0bdcurksutrp7h69ic7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

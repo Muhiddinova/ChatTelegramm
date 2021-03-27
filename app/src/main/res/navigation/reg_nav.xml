@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reg_nav"
+    app:startDestination="@id/splashFragment2">
+
+    <fragment
+        android:id="@+id/registrationFragment2"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.splash.registration.RegistrationFragment"
+        android:label="RegistrationFragment" />
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.splash.SplashFragment"
+        android:label="SplashFragment" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.splash.SplashActivity"
+        android:label="SplashActivity" />
+    <fragment
+        android:id="@+id/verifyNumberFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.splash.registration.VerifyNumberFragment"
+        android:label="verify_number_fragment"
+        tools:layout="@layout/verify_number_fragment" />
+    <include app:graph="@navigation/main_nav" />
+    <fragment
+        android:id="@+id/getUserDataFragment"
+        android:name="com.visola_khudoynazarova.chattelegramm.ui.splash.registration.GetUserDataFragment"
+        android:label="GetUserDataFragment"
+        tools:layout="@layout/get_user_data_fragment"/>
+</navigation>
